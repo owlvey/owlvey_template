@@ -20,7 +20,7 @@ namespace ProjectPS.ServicePS.UnitTests
             var value = Faker.RandomNumber.Next().ToString();
             var isReadOnly = true;
 
-            var appSettingEntity = AppSetting.Factory.Create(id, value, isReadOnly, createdBy);
+            var appSettingEntity = AppSettingEntity.Factory.Create(id, value, isReadOnly, createdBy);
 
             Assert.Equal(id, appSettingEntity.Key);
             Assert.Equal(value, appSettingEntity.Value);
@@ -36,7 +36,7 @@ namespace ProjectPS.ServicePS.UnitTests
             var value = Faker.RandomNumber.Next().ToString();
             var isReadOnly = true;
 
-            var appSettingEntity = AppSetting.Factory.Create(id, value, isReadOnly, createdBy);
+            var appSettingEntity = AppSettingEntity.Factory.Create(id, value, isReadOnly, createdBy);
 
             //Assert.Throws<InvalidDomainModelException>(() => {
             //    AppSetting.Factory.Create(id, value, isReadOnly, createdBy);

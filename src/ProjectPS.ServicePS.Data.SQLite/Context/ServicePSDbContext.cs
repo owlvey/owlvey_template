@@ -12,7 +12,7 @@ namespace ProjectPS.ServicePS.Data.SQLite.Context
 
         }
         
-        public DbSet<AppSetting> AppSettings { get; set; }
+        public DbSet<AppSettingEntity> AppSettings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

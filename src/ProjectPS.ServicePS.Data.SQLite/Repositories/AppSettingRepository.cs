@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ProjectPS.ServicePS.Data.SQLite.Repositories
 {
-    public class AppSettingRepository : Repository<AppSetting>, IAppSettingRepository
+    public class AppSettingRepository : Repository<AppSettingEntity>, IAppSettingRepository
     {
         public AppSettingRepository(ServicePSDbContext context) : base(context)
         {

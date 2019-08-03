@@ -33,7 +33,7 @@ namespace ProjectPS.ServicePS.Component.Services
             var result = new BaseComponentResultRp();
             var createdBy = this._identityService.GetIdentity();
 
-            var appSetting = AppSetting.Factory.Create(model.Key, model.Value, true, createdBy);
+            var appSetting = AppSettingEntity.Factory.Create(model.Key, model.Value, true, createdBy);
 
             var entity = await this._appSettingRepository.FindFirst(c => c.Key.Equals(model.Key));
             if (entity != null)

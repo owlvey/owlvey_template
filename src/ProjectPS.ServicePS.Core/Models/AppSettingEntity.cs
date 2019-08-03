@@ -7,11 +7,11 @@ using System.Text;
 namespace ProjectPS.ServicePS.Core.Models
 {
     /// <summary>
-    /// This class is responsible for storing the domain settings.
+    /// This class is responsible for storing the core settings.
     /// </summary>
-    public class AppSetting : EntityBase
+    public class AppSettingEntity : EntityBase
     {
-        public AppSetting() : base()
+        public AppSettingEntity() : base()
         {
 
         }
@@ -44,13 +44,13 @@ namespace ProjectPS.ServicePS.Core.Models
             /// <param name="isReadOnly">Is ReadOnly</param>
             /// <param name="createdBy">Created By</param>
             /// <returns></returns>
-            public static AppSetting Create(
+            public static AppSettingEntity Create(
                 string key, 
                 string value, 
                 bool isReadOnly, 
                 string createdBy)
             {
-                var entity = new AppSetting()
+                var entity = new AppSettingEntity()
                 {
                     Key = key,
                     Value = value,

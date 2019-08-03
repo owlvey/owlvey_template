@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjectPS.ServicePS.Core.Repositories
 {
-    public interface IAppSettingRepository : IRepository<AppSetting>
+    public interface IAppSettingRepository : IRepository<AppSettingEntity>
     {
         
     }
