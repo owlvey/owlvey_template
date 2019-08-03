@@ -28,7 +28,6 @@ namespace ProjectPS.ServicePS.Components.Models
 
     public class AppSettingPutRp
     {
-        public string Key { get; set; }
         public string Value { get; set; }
     }
 }

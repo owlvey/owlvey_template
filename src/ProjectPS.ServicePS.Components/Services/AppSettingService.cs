@@ -84,14 +84,14 @@ namespace ProjectPS.ServicePS.Components.Services
         /// </summary>
         /// <param name="model">AppSetting Model</param>
         /// <returns></returns>
-        public async Task<BaseComponentResultRp> UpdateAppSetting(AppSettingPutRp model)
+        public async Task<BaseComponentResultRp> UpdateAppSetting(string key, AppSettingPutRp model)
         {
             var result = new BaseComponentResultRp();
-            var appSetting = await this._appSettingRepository.GetAppSettingByKey(model.Key);
+            var appSetting = await this._appSettingRepository.GetAppSettingByKey(key);
 
             if (appSetting == null)
             {
-                result.AddNotFound($"The Key {model.Key} doesn't exists.");
+                result.AddNotFound($"The Key {key} doesn't exists.");
                 return result;
             }
 

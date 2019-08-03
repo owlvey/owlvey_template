@@ -24,7 +24,10 @@ namespace ProjectPS.ServicePS.Components.Services
         /// <returns></returns>
         public async Task<AppSettingGetRp> GetAppSettingById(string key)
         {
-            var entity = await this._appSettingRepository.FindFirst(c => c.Key.Equals(key, StringComparison.OrdinalIgnoreCase));
+            var entity = await this._appSettingRepository.GetAppSettingByKey(key);
+
+            if (entity == null)
+                return null;
 
             return new AppSettingGetRp {
                 Key = entity.Key,

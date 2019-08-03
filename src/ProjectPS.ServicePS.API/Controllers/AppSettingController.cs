@@ -43,6 +43,10 @@ namespace ProjectPS.ServicePS.API.Controllers
         public async Task<IActionResult> GetById(string id)
         {
             var model = await this._appSettingQueryService.GetAppSettingById(id);
+
+            if (model == null)
+                return this.NotFound($"The Key {id} doesn't exists.");
+
             return this.Ok(model);
         }
 
@@ -88,7 +92,7 @@ namespace ProjectPS.ServicePS.API.Controllers
             if (!this.ModelState.IsValid)
                 return this.BadRequest(this.ModelState);
 
-            var response = await this._appSettingService.UpdateAppSetting(resource);
+            var response = await this._appSettingService.UpdateAppSetting(id, resource);
 
             if (response.HasNotFounds())
             {

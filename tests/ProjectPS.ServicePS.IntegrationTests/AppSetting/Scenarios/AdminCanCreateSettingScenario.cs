@@ -16,10 +16,8 @@ namespace ProjectPS.ServicePS.IntegrationTests.AppSetting.Scenarios
         private readonly HttpClient _client;
         public AdminCanCreateSettingScenario(HttpClient client)
         {
-            _client = client;
-            
+            _client = client;    
         }
-
 
         private AppSettingPostRp representation;
 

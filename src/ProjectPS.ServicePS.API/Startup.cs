@@ -32,7 +32,7 @@ namespace ProjectPS.ServicePS.API
         public virtual void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-
+            services.AddCors();
             services.AddApplicationServices(Configuration);
             services.AddRepositories(Configuration);
             services.SetupDataBase(Configuration);
@@ -64,6 +64,7 @@ namespace ProjectPS.ServicePS.API
             });
 
             app.UseHttpsRedirection();
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseMvc();
         }
     }

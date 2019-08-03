@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -7,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ProjectPS.ServicePS.API;
+using ProjectPS.ServicePS.API.Controllers;
 using ProjectPS.ServicePS.Data.SQLite.Context;
 using ProjectPS.ServicePS.IoC;
 using ProjectPS.ServicePS.Options;
@@ -37,7 +39,7 @@ namespace ProjectPS.ServicePS.IntegrationTests.Setup
         /// <param name="services">Service Collection</param>
         public override void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc().AddApplicationPart(typeof(BaseController).Assembly);
 
             services.AddApplicationServices(Configuration);
             services.AddRepositories(Configuration);
@@ -54,7 +56,7 @@ namespace ProjectPS.ServicePS.IntegrationTests.Setup
                 .AddDbContext<ServicePSDbContext>(options =>
                 options.UseSqlite(connection)
             );
-
+            
         }
 
         /// <summary>

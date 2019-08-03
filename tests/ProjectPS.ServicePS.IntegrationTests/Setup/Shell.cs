@@ -43,7 +43,6 @@ namespace ProjectPS.ServicePS.IntegrationTests.Setup
             // add TestServer Client
             var builder = new WebHostBuilder()
                 .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseEnvironment("Testing")
                 .UseStartup<TestStartup>();
 
 

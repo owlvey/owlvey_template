@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,7 +14,7 @@ namespace ProjectPS.ServicePS.IoC
         public static void AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
             // ASP.NET HttpContext dependency
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            // services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             // Application
             services.AddTransient<IAppSettingQueryService, AppSettingQueryService>();
