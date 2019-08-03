@@ -16,7 +16,7 @@ steps:
     includeRootFolder: false
     archiveFile: $(Build.ArtifactStagingDirectory)/application.zip
 
-- script: dotnet ef migrations script --project src/ProjectPS.ServicePS.Data.SqlServer/ProjectPS.ServicePS.Data.SqlServer.csproj --startup-project src/ProjectPS.ServicePS.Data.SqlServer/ProjectPS.ServicePS.Data.SqlServer.csproj -i -o scripts/migrations.sql
+- script: dotnet ef migrations script --project src/ProjectPS.ServicePS.Data.SQLite/ProjectPS.ServicePS.Data.SQLite.csproj --startup-project src/ProjectPS.ServicePS.Data.SQLite/ProjectPS.ServicePS.Data.SQLite.csproj -i -o scripts/migrations.sql
   displayName: Script Migrations
 
 - task: PublishBuildArtifacts@1
