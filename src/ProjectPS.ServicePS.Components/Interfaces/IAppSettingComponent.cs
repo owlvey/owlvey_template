@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectPS.ServicePS.Components.Interfaces
 {
-    public interface IAppSettingService
+    public interface IAppSettingComponent
     {
         Task<BaseComponentResultRp> CreateAppSetting(AppSettingPostRp model);
         Task<BaseComponentResultRp> UpdateAppSetting(string key, AppSettingPutRp model);

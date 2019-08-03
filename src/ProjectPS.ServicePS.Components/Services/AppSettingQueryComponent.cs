@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace ProjectPS.ServicePS.Components.Services
 {
-    public class AppSettingQueryService : IAppSettingQueryService
+    public class AppSettingQueryComponent : BaseComponent, IAppSettingQueryComponent
     {
         private readonly IAppSettingRepository _appSettingRepository;
-        public AppSettingQueryService(IAppSettingRepository appSettingRepository)
+        public AppSettingQueryComponent(IAppSettingRepository appSettingRepository)
         {
             this._appSettingRepository = appSettingRepository;
         }

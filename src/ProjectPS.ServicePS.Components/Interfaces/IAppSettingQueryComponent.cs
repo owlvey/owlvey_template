@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectPS.ServicePS.Components.Interfaces
 {
-    public interface IAppSettingQueryService
+    public interface IAppSettingQueryComponent
     {
         Task<IEnumerable<AppSettingGetListRp>> GetSettings();
         Task<AppSettingGetRp> GetAppSettingById(string key);

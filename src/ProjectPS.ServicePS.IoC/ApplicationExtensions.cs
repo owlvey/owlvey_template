@@ -17,8 +17,8 @@ namespace ProjectPS.ServicePS.IoC
             // services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             // Application
-            services.AddTransient<IAppSettingQueryService, AppSettingQueryService>();
-            services.AddTransient<IAppSettingService, AppSettingService>();
+            services.AddTransient<IAppSettingQueryComponent, AppSettingQueryComponent>();
+            services.AddTransient<IAppSettingComponent, AppSettingComponent>();
             
             // Infra
             services.AddAspNetCoreIndentityService();

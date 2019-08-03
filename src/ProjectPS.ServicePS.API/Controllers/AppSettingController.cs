@@ -11,11 +11,11 @@ namespace ProjectPS.ServicePS.API.Controllers
     [Route("appsettings")]
     public class AppSettingController : BaseController
     {
-        private readonly IAppSettingQueryService _appSettingQueryService;
-        private readonly IAppSettingService _appSettingService;
+        private readonly IAppSettingQueryComponent _appSettingQueryService;
+        private readonly IAppSettingComponent _appSettingService;
         
-        public AppSettingController(IAppSettingQueryService appSettingQueryService,
-                                    IAppSettingService appSettingService) : base()
+        public AppSettingController(IAppSettingQueryComponent appSettingQueryService,
+                                    IAppSettingComponent appSettingService) : base()
         {
             this._appSettingQueryService = appSettingQueryService;
             this._appSettingService = appSettingService;

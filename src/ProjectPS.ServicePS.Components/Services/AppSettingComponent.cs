@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace ProjectPS.ServicePS.Components.Services
 {
-    public class AppSettingService : IAppSettingService
+    public class AppSettingComponent : BaseComponent, IAppSettingComponent
     {
         private readonly IAppSettingRepository _appSettingRepository;
         private readonly IUserIdentityService _identityService;
 
-        public AppSettingService(IAppSettingRepository appSettingRepository,
+        public AppSettingComponent(IAppSettingRepository appSettingRepository,
             IUserIdentityService identityService)
         {
             this._appSettingRepository = appSettingRepository;

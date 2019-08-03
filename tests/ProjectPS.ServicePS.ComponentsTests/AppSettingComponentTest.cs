@@ -43,7 +43,7 @@ namespace ProjectPS.ServicePS.ComponentsTests
             var mockIdentityService = new Mock<IUserIdentityService>();
             mockIdentityService.Setup(x => x.GetIdentity()).Returns("mock-user");
 
-            var sut = new AppSettingService(mockAppSettingRepository.Object, mockIdentityService.Object);
+            var sut = new AppSettingComponent(mockAppSettingRepository.Object, mockIdentityService.Object);
             var result = sut.CreateAppSetting(appSettingModel).Result;
 
             Assert.True(!result.HasConflicts());
@@ -70,7 +70,7 @@ namespace ProjectPS.ServicePS.ComponentsTests
             var mockIdentityService = new Mock<IUserIdentityService>();
             mockIdentityService.Setup(x => x.GetIdentity()).Returns("mock-user");
 
-            var sut = new AppSettingService(mockAppSettingRepository.Object, mockIdentityService.Object);
+            var sut = new AppSettingComponent(mockAppSettingRepository.Object, mockIdentityService.Object);
             var result = sut.CreateAppSetting(appSettingModel).Result;
 
             Assert.True(result.HasConflicts());
