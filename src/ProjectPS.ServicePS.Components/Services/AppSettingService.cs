@@ -1,6 +1,6 @@
-﻿using ProjectPS.ServicePS.Component.Gateways;
-using ProjectPS.ServicePS.Component.Interfaces;
-using ProjectPS.ServicePS.Component.Models;
+﻿using ProjectPS.ServicePS.Components.Gateways;
+using ProjectPS.ServicePS.Components.Interfaces;
+using ProjectPS.ServicePS.Components.Models;
 using ProjectPS.ServicePS.Core.Models;
 using ProjectPS.ServicePS.Core.Repositories;
 using System;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectPS.ServicePS.Component.Services
+namespace ProjectPS.ServicePS.Components.Services
 {
     public class AppSettingService : IAppSettingService
     {

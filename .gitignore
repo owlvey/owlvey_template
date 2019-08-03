@@ -67,3 +67,7 @@
 /src/ProjectPS.ServicePS.Component/obj
 /tests/ProjectPS.ServicePS.ComponentTests/bin
 /tests/ProjectPS.ServicePS.ComponentTests/obj
+/tests/ProjectPS.ServicePS.ComponentsTests/obj
+/tests/ProjectPS.ServicePS.ComponentsTests/bin
+/src/ProjectPS.ServicePS.Components/obj
+/src/ProjectPS.ServicePS.Components/bin/Debug

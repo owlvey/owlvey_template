@@ -1,10 +1,10 @@
-﻿using ProjectPS.ServicePS.Component.Models;
+﻿using ProjectPS.ServicePS.Components.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectPS.ServicePS.Component.Interfaces
+namespace ProjectPS.ServicePS.Components.Interfaces
 {
     public interface IAppSettingQueryService
     {

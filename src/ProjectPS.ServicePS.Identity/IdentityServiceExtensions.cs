@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using ProjectPS.ServicePS.Component.Gateways;
+using ProjectPS.ServicePS.Components.Gateways;
 using System;
 using System.Collections.Generic;
 using System.Text;

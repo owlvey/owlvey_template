@@ -28,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ProjectPS.ServicePS.Component\ProjectPS.ServicePS.Component.csproj" />
     <ProjectReference Include="..\ProjectPS.ServicePS.Identity\ProjectPS.ServicePS.Identity.csproj" />
     <ProjectReference Include="..\ProjectPS.ServicePS.IoC\ProjectPS.ServicePS.IoC.csproj" />
     <ProjectReference Include="..\ProjectPS.ServicePS.Options\ProjectPS.ServicePS.Options.csproj" />

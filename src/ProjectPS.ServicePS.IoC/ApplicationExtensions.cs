@@ -4,8 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using ProjectPS.ServicePS.Component.Interfaces;
-using ProjectPS.ServicePS.Component.Services;
+using ProjectPS.ServicePS.Components.Interfaces;
+using ProjectPS.ServicePS.Components.Services;
 using ProjectPS.ServicePS.Identity;
 
 namespace ProjectPS.ServicePS.IoC

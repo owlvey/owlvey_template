@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ProjectPS.ServicePS.Component.Interfaces;
-using ProjectPS.ServicePS.Component.Models;
+using ProjectPS.ServicePS.Components.Interfaces;
+using ProjectPS.ServicePS.Components.Models;
 
 namespace ProjectPS.ServicePS.API.Controllers
 {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
-using ProjectPS.ServicePS.Component.Gateways;
+using ProjectPS.ServicePS.Components.Gateways;
 using System;
 using System.Linq;
 

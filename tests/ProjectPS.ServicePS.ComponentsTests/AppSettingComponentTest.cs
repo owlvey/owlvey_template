@@ -1,9 +1,9 @@
 using FizzWare.NBuilder;
-using ProjectPS.ServicePS.Component.Models;
+using ProjectPS.ServicePS.Components.Models;
 using System;
 using Xunit;
 
-namespace ProjectPS.ServicePS.ComponentTests
+namespace ProjectPS.ServicePS.ComponentsTests
 {
     public class AppSettingComponentTest
     {

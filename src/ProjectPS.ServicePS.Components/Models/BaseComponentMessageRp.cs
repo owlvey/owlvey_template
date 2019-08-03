@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProjectPS.ServicePS.Component.Models
+namespace ProjectPS.ServicePS.Components.Models
 {
     public class BaseComponentMessageRp
     {

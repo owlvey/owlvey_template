@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProjectPS.ServicePS.Component.Gateways
+namespace ProjectPS.ServicePS.Components.Gateways
 {
     public interface IUserIdentityService
     {

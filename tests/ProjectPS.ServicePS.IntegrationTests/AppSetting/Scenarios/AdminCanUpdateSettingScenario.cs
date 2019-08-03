@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using ProjectPS.ServicePS.IntegrationTests.Setup;
-using ProjectPS.ServicePS.Component.Models;
+using ProjectPS.ServicePS.Components.Models;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
