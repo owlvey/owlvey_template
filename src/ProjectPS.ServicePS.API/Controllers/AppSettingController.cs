@@ -68,7 +68,11 @@ namespace ProjectPS.ServicePS.API.Controllers
                 return this.BadRequest(this.ModelState);
 
             var response = await this._appSettingService.CreateAppSetting(resource);
-            
+
+            if (response.HasConflicts()) {
+                return this.Conflict(response.GetConflicts());
+            }
+
             return this.Ok();
         }
 
@@ -85,7 +89,17 @@ namespace ProjectPS.ServicePS.API.Controllers
                 return this.BadRequest(this.ModelState);
 
             var response = await this._appSettingService.UpdateAppSetting(resource);
-            
+
+            if (response.HasNotFounds())
+            {
+                return this.NotFound(response.GetNotFounds());
+            }
+
+            if (response.HasConflicts())
+            {
+                return this.Conflict(response.GetConflicts());
+            }
+
             return this.Ok();
         }
 
@@ -102,7 +116,17 @@ namespace ProjectPS.ServicePS.API.Controllers
                 return this.BadRequest(this.ModelState);
 
             var response = await this._appSettingService.DeleteAppSetting(id);
-            
+
+            if (response.HasNotFounds())
+            {
+                return this.NotFound(response.GetNotFounds());
+            }
+
+            if (response.HasConflicts())
+            {
+                return this.Conflict(response.GetConflicts());
+            }
+
             return this.NoContent();
         }
 

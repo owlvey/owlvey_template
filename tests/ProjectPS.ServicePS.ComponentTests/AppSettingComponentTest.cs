@@ -3,11 +3,11 @@ using ProjectPS.ServicePS.Component.Models;
 using System;
 using Xunit;
 
-namespace ProjectPS.ServicePS.UnitTests
+namespace ProjectPS.ServicePS.ComponentTests
 {
-    public class AppSettingUnitTest
+    public class AppSettingComponentTest
     {
-        public AppSettingUnitTest()
+        public AppSettingComponentTest()
         {
 
         }
@@ -22,13 +22,6 @@ namespace ProjectPS.ServicePS.UnitTests
                                 .With(x => x.Value = Guid.NewGuid().ToString("n"))
                                 .Build();
 
-            //var appSettingEntity = AppSetting.Factory.Create(appSettingModel.Id,
-            //                                                 appSettingModel.Value,
-            //                                                 createdBy);
-
-            //Assert.Equal(appSettingModel.Id, appSettingEntity.Id);
-            //Assert.Equal(appSettingModel.Value, appSettingEntity.Value);
-            //Assert.Equal(createdBy, appSettingEntity.CreatedBy);
         }
 
         [Fact]
@@ -40,12 +33,6 @@ namespace ProjectPS.ServicePS.UnitTests
                                  .With(x => x.Key = string.Empty)
                                  .With(x => x.Value = Guid.NewGuid().ToString("n"))
                                  .Build();
-
-            //Assert.Throws<InvalidDomainModelException>(() => {
-            //    AppSetting.Factory.Create(appSettingModel.Id,
-            //                                                appSettingModel.Value,
-            //                                                createdBy);
-            //                                                });
 
         }
     }

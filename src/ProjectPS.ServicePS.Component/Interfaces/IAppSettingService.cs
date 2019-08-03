@@ -8,8 +8,8 @@ namespace ProjectPS.ServicePS.Component.Interfaces
 {
     public interface IAppSettingService
     {
-        Task<ApplicationResultRp> CreateAppSetting(AppSettingPostRp model);
-        Task<ApplicationResultRp> UpdateAppSetting(AppSettingPutRp model);
-        Task<ApplicationResultRp> DeleteAppSetting(string key);
+        Task<BaseComponentResultRp> CreateAppSetting(AppSettingPostRp model);
+        Task<BaseComponentResultRp> UpdateAppSetting(AppSettingPutRp model);
+        Task<BaseComponentResultRp> DeleteAppSetting(string key);
     }
 }

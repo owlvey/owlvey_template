@@ -28,9 +28,9 @@ namespace ProjectPS.ServicePS.Component.Services
         /// </summary>
         /// <param name="model">AppSetting Model</param>
         /// <returns></returns>
-        public async Task<ApplicationResultRp> CreateAppSetting(AppSettingPostRp model)
+        public async Task<BaseComponentResultRp> CreateAppSetting(AppSettingPostRp model)
         {
-            var result = new ApplicationResultRp();
+            var result = new BaseComponentResultRp();
             var createdBy = this._identityService.GetIdentity();
 
             var appSetting = AppSetting.Factory.Create(model.Key, model.Value, true, createdBy);
@@ -38,7 +38,7 @@ namespace ProjectPS.ServicePS.Component.Services
             var entity = await this._appSettingRepository.FindFirst(c => c.Key.Equals(model.Key));
             if (entity != null)
             {
-                //result.AddConflict($"The Key {model.Key} has already been taken.");
+                result.AddConflict($"The Key {model.Key} has already been taken.");
                 return result;
             }
 
@@ -46,7 +46,7 @@ namespace ProjectPS.ServicePS.Component.Services
 
             await this._appSettingRepository.SaveChanges();
 
-            //result.AddResult("Key", appSetting.Key);
+            result.AddResult("Key", appSetting.Key);
 
             return result;
         }
@@ -56,15 +56,15 @@ namespace ProjectPS.ServicePS.Component.Services
         /// </summary>
         /// <param name="key">AppSetting Keg</param>
         /// <returns></returns>
-        public async Task<ApplicationResultRp> DeleteAppSetting(string key)
+        public async Task<BaseComponentResultRp> DeleteAppSetting(string key)
         {
-            var result = new ApplicationResultRp();
+            var result = new BaseComponentResultRp();
 
             var appSetting = await this._appSettingRepository.FindFirst(c => c.Key.Equals(key));
 
             if (appSetting == null)
             {
-                //result.AddNotFound($"The Key {key} doesn't exists.");
+                result.AddNotFound($"The Key {key} doesn't exists.");
                 return result;
             }
 
@@ -82,16 +82,16 @@ namespace ProjectPS.ServicePS.Component.Services
         /// <summary>
         /// Update appsetting
         /// </summary>
-        /// <param name="model">AppSertting Model</param>
+        /// <param name="model">AppSetting Model</param>
         /// <returns></returns>
-        public async Task<ApplicationResultRp> UpdateAppSetting(AppSettingPutRp model)
+        public async Task<BaseComponentResultRp> UpdateAppSetting(AppSettingPutRp model)
         {
-            var result = new ApplicationResultRp();
+            var result = new BaseComponentResultRp();
             var appSetting = await this._appSettingRepository.FindFirst(c => c.Key.Equals(model.Key));
 
             if (appSetting == null)
             {
-                //result.AddNotFound($"The Key {model.Key} doesn't exists.");
+                result.AddNotFound($"The Key {model.Key} doesn't exists.");
                 return result;
             }
 

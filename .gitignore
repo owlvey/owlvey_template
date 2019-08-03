@@ -65,3 +65,5 @@
 /src/ProjectPS.ServicePS.Options/bin/Debug/netcoreapp2.1
 /src/ProjectPS.ServicePS.Component/bin/Debug
 /src/ProjectPS.ServicePS.Component/obj
+/tests/ProjectPS.ServicePS.ComponentTests/bin
+/tests/ProjectPS.ServicePS.ComponentTests/obj
