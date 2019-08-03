@@ -9,6 +9,6 @@ namespace ProjectPS.ServicePS.Core.Repositories
 {
     public interface IAppSettingRepository : IRepository<AppSettingEntity>
     {
-        
+        Task<AppSettingEntity> GetAppSettingByKey(string key);
     }
 }

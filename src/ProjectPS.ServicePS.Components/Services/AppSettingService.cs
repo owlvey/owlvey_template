@@ -35,7 +35,7 @@ namespace ProjectPS.ServicePS.Components.Services
 
             var appSetting = AppSettingEntity.Factory.Create(model.Key, model.Value, true, createdBy);
 
-            var entity = await this._appSettingRepository.FindFirst(c => c.Key.Equals(model.Key));
+            var entity = await this._appSettingRepository.GetAppSettingByKey(model.Key);
             if (entity != null)
             {
                 result.AddConflict($"The Key {model.Key} has already been taken.");
@@ -60,7 +60,7 @@ namespace ProjectPS.ServicePS.Components.Services
         {
             var result = new BaseComponentResultRp();
 
-            var appSetting = await this._appSettingRepository.FindFirst(c => c.Key.Equals(key));
+            var appSetting = await this._appSettingRepository.GetAppSettingByKey(key);
 
             if (appSetting == null)
             {
@@ -87,7 +87,7 @@ namespace ProjectPS.ServicePS.Components.Services
         public async Task<BaseComponentResultRp> UpdateAppSetting(AppSettingPutRp model)
         {
             var result = new BaseComponentResultRp();
-            var appSetting = await this._appSettingRepository.FindFirst(c => c.Key.Equals(model.Key));
+            var appSetting = await this._appSettingRepository.GetAppSettingByKey(model.Key);
 
             if (appSetting == null)
             {

@@ -17,5 +17,9 @@ namespace ProjectPS.ServicePS.Data.SQLite.Repositories
 
         }
 
+        public async Task<AppSettingEntity> GetAppSettingByKey(string key)
+        {
+            return await this.DbSet.FirstOrDefaultAsync(c => c.Key.Equals(key));
+        }
     }
 }
